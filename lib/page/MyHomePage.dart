@@ -1,18 +1,26 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/page/widget/WeatherState.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/rendering.dart';
+import 'package:weather_app/widget/NavigationBar.dart';
+import 'package:weather_app/widget/WeatherState.dart';
 
-class MyHomePage extends StatelessWidget {
+
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final double screanHeight = MediaQuery.of(context).size.height;
     final double screanWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: KNavigationBar(onItemTapped: (int ) {  },),
         body: Stack(
           children: [
             Positioned(
