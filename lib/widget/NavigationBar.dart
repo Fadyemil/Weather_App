@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class KNavigationBar extends StatefulWidget {
   const KNavigationBar({
     super.key,
-    required this.onItemTapped,
+    required this.onItemTapped, required this.selectedIndex,
   });
 
   final void Function(int) onItemTapped;
+  final int selectedIndex;
 
   @override
   State<KNavigationBar> createState() => _KNavigationBarState();
