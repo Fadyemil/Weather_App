@@ -2,9 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:weather_app/widget/NavigationBar.dart';
 import 'package:weather_app/widget/WeatherState.dart';
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -20,7 +18,6 @@ class _MyHomePageState extends State<MyHomePage> {
     final double screanWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: KNavigationBar(onItemTapped: (int ) {  },),
         body: Stack(
           children: [
             Positioned(

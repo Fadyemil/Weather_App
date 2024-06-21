@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/widget/NavigationBar.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:weather_app/manger/Select_cubit.dart';
+// import 'package:weather_app/manger/Select_state.dart';
+// import 'package:weather_app/widget/NavigationBar.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: KNavigationBar(
-          onItemTapped: (int) {},
+        appBar: AppBar(
+          title: Text("Search"),
+        ),
+        body: Center(
+          child: Text("Search"),
         ),
       ),
     );
