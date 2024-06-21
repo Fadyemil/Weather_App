@@ -28,10 +28,17 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             WeatherState(screanHeight: screanHeight),
+            Positioned(
+              top: screanHeight * 0.32,
+              child: Container(
+                width: 390,
+                height: 390,
+                child: Image.asset('asstes/House.png'),
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
