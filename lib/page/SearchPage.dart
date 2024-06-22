@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:weather_app/manger/Select_cubit.dart';
-// import 'package:weather_app/manger/Select_state.dart';
-// import 'package:weather_app/widget/NavigationBar.dart';
+import 'package:weather_app/widget/AppBarSearchPage.dart';
+import 'package:weather_app/widget/SearchWidget.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
@@ -11,13 +9,16 @@ class Searchpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Search"),
-        ),
-        body: Center(
-          child: Text("Search"),
-        ),
-      ),
+          backgroundColor: Color(0xff2E335A),
+          appBar: AppBarSearchPage(),
+          body: Container(
+            margin: const EdgeInsets.all(8),
+            child: Column(
+              children: [
+                SearchWidget(),
+              ],
+            ),
+          )),
     );
   }
 }
