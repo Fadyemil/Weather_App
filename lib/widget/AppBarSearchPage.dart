@@ -10,10 +10,12 @@ AppBar AppBarSearchPage() {
         color: Colors.white,
       ),
     ),
-    title: const Text(
-      "Weathwe",
-      style: TextStyle(
-        color: Colors.white,
+    title: Center(
+      child: const Text(
+        "Weathwe",
+        style: TextStyle(
+          color: Colors.white,
+        ),
       ),
     ),
     actions: [
