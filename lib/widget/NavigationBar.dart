@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class KNavigationBar extends StatefulWidget {
   const KNavigationBar({
     super.key,
-    required this.onItemTapped, required this.selectedIndex,
+    required this.onItemTapped,
+    required this.selectedIndex,
   });
 
   final void Function(int) onItemTapped;
@@ -24,8 +25,8 @@ class _KNavigationBarState extends State<KNavigationBar> {
         animationDuration: Duration(milliseconds: 650),
         animationCurve: Curves.easeOutCubic,
         items: [
-          Icon(Icons.location_on_outlined, size: 30, color: Colors.white),
           Icon(Icons.home, size: 30, color: Colors.white),
+          Icon(Icons.location_on_outlined, size: 30, color: Colors.white),
           Icon(Icons.search, size: 30, color: Colors.white),
         ],
         onTap: widget.onItemTapped,

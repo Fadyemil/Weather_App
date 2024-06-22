@@ -1,11 +1,11 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:weather_app/widget/WeatherState.dart';
+import 'package:weather_app/widget/Weekly_Forecast.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class Page_Forecast extends StatelessWidget {
+  const Page_Forecast({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +36,12 @@ class MyHomePage extends StatelessWidget {
                 child: Image.asset('asstes/House.png'),
               ),
             ),
+            Weekly_Forecast(
+              screanHeight: screanHeight,
+            ),
           ],
         ),
       ),
     );
   }
 }
-
