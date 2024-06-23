@@ -1,8 +1,8 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/widget/WeatherState.dart';
-import 'package:weather_app/widget/Weekly_Forecast.dart';
+import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
+import 'package:weather_app/widget/HomePageWidget/Weekly_Forecast.dart';
 
 class Page_Forecast extends StatelessWidget {
   const Page_Forecast({super.key});

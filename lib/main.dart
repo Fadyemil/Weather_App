@@ -7,6 +7,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/Application.dart';
 import 'package:weather_app/manger/Appcubit.dart';
+import 'package:weather_app/widget/AppWidget/EnterNetMobile.dart';
+import 'package:weather_app/widget/AppWidget/NoInterNet.dart';
 // import 'package:weather_app/page/MyHomePage.dart';
 
 void main() {
@@ -70,61 +72,4 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class EnterNetMobile extends StatelessWidget {
-  const EnterNetMobile({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 150),
-            Container(
-              child: Image.asset('asstes/images.png'),
-            ),
-            Text(
-              'connected to my phone data',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class NoInterNet extends StatelessWidget {
-  const NoInterNet({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 150),
-            Container(
-              child: Image.asset(
-                  'asstes/wifi-error-signal-offline-icon-off-vector-37642163.jpg'),
-            ),
-            Text(
-              'Internet connection failed',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}

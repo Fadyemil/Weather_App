@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/manger/Appcubit.dart';
 import 'package:weather_app/manger/Appstate.dart';
-import 'package:weather_app/widget/NavigationBar.dart';
-import 'package:weather_app/widget/getPage.dart';
+import 'package:weather_app/widget/AppWidget/NavigationBar.dart';
+import 'package:weather_app/widget/AppWidget/getPage.dart';
 
 class ApplicationPage extends StatelessWidget {
   const ApplicationPage({super.key});

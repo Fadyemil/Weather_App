@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:weather_app/widget/WeatherState.dart';
+import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});

@@ -1,9 +1,9 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/widget/AppBarSearchPage.dart';
-import 'package:weather_app/widget/DetailsWeather.dart';
-import 'package:weather_app/widget/SearchWidget.dart';
+import 'package:weather_app/widget/searchWidhet/AppBarSearchPage.dart';
+import 'package:weather_app/widget/searchWidhet/DetailsWeather.dart';
+import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
