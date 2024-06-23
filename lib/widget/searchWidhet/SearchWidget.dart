@@ -1,4 +1,8 @@
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:weather_app/Service/WeatherService.dart';
+import 'package:weather_app/models/Weather_Model.dart';
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({super.key});
@@ -13,6 +17,12 @@ class SearchWidget extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(18)),
       ),
       child: TextField(
+        onSubmitted: (value) async {
+          WeatherModel weatherModel =
+              await WeatherService(Dio()).getCurrentWeather(cityName: value);
+          print(
+              '***********${weatherModel.location.name}***************');
+        },
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           border: OutlineInputBorder(
