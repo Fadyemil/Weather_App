@@ -1,12 +1,11 @@
-
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 // import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/Application.dart';
-import 'package:weather_app/manger/Appcubit.dart';
+import 'package:weather_app/manger/SelectPage/SelectPage_Cubit.dart';
+import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 import 'package:weather_app/widget/AppWidget/EnterNetMobile.dart';
 import 'package:weather_app/widget/AppWidget/NoInterNet.dart';
 // import 'package:weather_app/page/MyHomePage.dart';
@@ -43,7 +42,12 @@ class _MyAppState extends State<MyApp> {
           create: (context) {
             return SelectPageCubit();
           },
-        )
+        ),
+        BlocProvider(
+          create: (context) {
+            return GetWeatherCubit();
+          },
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -56,7 +60,7 @@ class _MyAppState extends State<MyApp> {
             stream: Connectivity().onConnectivityChanged,
             builder: (context, snapshot) {
               final connectivityResult = snapshot.data;
-              if (connectivityResult ==  ConnectivityResult.none) {
+              if (connectivityResult == ConnectivityResult.none) {
                 return NoInterNet();
               }
               if (connectivityResult == ConnectivityResult.mobile) {
@@ -71,5 +75,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-

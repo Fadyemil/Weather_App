@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 import 'package:weather_app/widget/HomePageWidget/WeatherInfoBody.dart';
 // import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
-import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
+// import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -15,9 +15,9 @@ class MyHomePage extends StatelessWidget {
     final double screanWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        body: weatherModel == null
+        body: /*weatherModel == null
             ? NoWeatherBody()
-            : WeatherInfoBody(screanHeight: screanHeight),
+            :*/ WeatherInfoBody(screanHeight: screanHeight),
       ),
     );
   }

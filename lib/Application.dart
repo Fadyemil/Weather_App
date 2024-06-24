@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/manger/Appcubit.dart';
-import 'package:weather_app/manger/Appstate.dart';
+import 'package:weather_app/manger/SelectPage/SelectPage_Cubit.dart';
+import 'package:weather_app/manger/SelectPage/SelectPage_State.dart';
 import 'package:weather_app/widget/AppWidget/NavigationBar.dart';
 import 'package:weather_app/widget/AppWidget/getPage.dart';
 
