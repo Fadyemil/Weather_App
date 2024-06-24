@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
             } else if (state is WeatherLoadingState) {
               return WeatherInfoBody(screanHeight: screanHeight);
             } else {
-              return Text('opps ther was an error  ');
+              return Text('opps ther was an error');
             }
           },
         ),
