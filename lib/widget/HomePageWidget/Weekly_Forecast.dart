@@ -96,11 +96,12 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
                               fontSize: 16,
                             ),
                           ),
-                          Image.asset('asstes/Weather_Icon.png'),
+                          Image.network(
+                              "https:${weatherModel.forecast.forecastday[0].hour[index].condition.icon}"),
                           Text(
                             weatherModel
                                 .forecast.forecastday[0].hour[index].tempC
-                                .toInt()
+                                .ceil()
                                 .toString(),
                             style: TextStyle(
                               color: selectedIndex == index

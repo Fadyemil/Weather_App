@@ -1,9 +1,13 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
 import 'package:weather_app/widget/searchWidhet/AppBarSearchPage.dart';
-import 'package:weather_app/widget/searchWidhet/DetailsWeather.dart';
-import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
+// import 'package:weather_app/widget/searchWidhet/DetailsWeather.dart';
+import 'package:weather_app/widget/searchWidhet/SearchData.dart';
+// import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
 
 class Searchpage extends StatelessWidget {
   const Searchpage({super.key});
@@ -16,22 +20,19 @@ class Searchpage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color(0xff2E335A),
         appBar: AppBarSearchPage(),
-        body: Container(
-          margin: const EdgeInsets.all(8),
-          child: Column(
-            children: [
-              SearchWidget(),
-              Expanded(
-                child: DetailsWeather(
-                  screanHeight: screanHeight,
-                  screanWidth: screanWidth,
-                ),
-              )
-            ],
-          ),
+        body: BlocBuilder<GetWeatherCubit, GetWeatherState>(
+          builder: (context, state) {
+            if (state is GetWeatherInitial) {
+              return NoWeatherBody();
+            } else if (state is WeatherLoadingState) {
+              return SearchData(
+                  screanHeight: screanHeight, screanWidth: screanWidth);
+            } else {
+              return Text('opps ther was an error');
+            }
+          },
         ),
       ),
     );
   }
 }
-

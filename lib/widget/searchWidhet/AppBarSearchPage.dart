@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
 
 AppBar AppBarSearchPage() {
   return AppBar(
     backgroundColor: Colors.transparent,
-    leading: IconButton(
-      onPressed: () {},
-      icon: const Icon(
-        Icons.arrow_back_ios,
-        color: Colors.white,
-      ),
-    ),
-    title: Center(
-      child: const Text(
-        "Weathwe",
-        style: TextStyle(
-          color: Colors.white,
-        ),
-      ),
-    ),
+    
     actions: [
+      SearchWidget(),
       IconButton(
         onPressed: () {},
         icon: const Icon(

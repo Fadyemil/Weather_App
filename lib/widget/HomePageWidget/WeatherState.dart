@@ -33,7 +33,7 @@ class WeatherState extends StatelessWidget {
             ),
             Text(
               weatherModel.forecast.forecastday.first.avgtempC
-                  .toInt()
+                  .ceil()
                   .toString(),
               style: TextStyle(
                 height: 1,
@@ -56,7 +56,7 @@ class WeatherState extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "H:${weatherModel.forecast.forecastday.first.maxtempC.toInt()}",
+                  "H:${weatherModel.forecast.forecastday.first.maxtempC.ceil()}",
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
                     fontSize: 18,
@@ -65,7 +65,7 @@ class WeatherState extends StatelessWidget {
                 ),
                 SizedBox(width: 12),
                 Text(
-                  "L:${weatherModel.forecast.forecastday.first.mintempC.toInt()}",
+                  "L:${weatherModel.forecast.forecastday.first.mintempC.ceil()}",
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
                     fontSize: 18,

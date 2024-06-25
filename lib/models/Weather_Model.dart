@@ -95,6 +95,7 @@ class ForecastDay {
   double maxtempC;
   double mintempC;
   double avgtempC;
+  Condition condition; 
   List<Hour> hour;
 
   ForecastDay({
@@ -102,6 +103,7 @@ class ForecastDay {
     required this.maxtempC,
     required this.mintempC,
     required this.avgtempC,
+    required this.condition, 
     required this.hour,
   });
 
@@ -115,6 +117,7 @@ class ForecastDay {
       maxtempC: json['day']['maxtemp_c'],
       mintempC: json['day']['mintemp_c'],
       avgtempC: json['day']['avgtemp_c'],
+      condition: Condition.fromJson(json['day']['condition']),
       hour: hourItems,
     );
   }
@@ -127,6 +130,7 @@ class ForecastDay {
         'maxtemp_c': maxtempC,
         'mintemp_c': mintempC,
         'avgtemp_c': avgtempC,
+        'condition': condition.toJson(),
       },
       'hour': hour.map((v) => v.toJson()).toList(),
     };
