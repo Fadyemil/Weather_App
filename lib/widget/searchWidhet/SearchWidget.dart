@@ -1,5 +1,7 @@
 // import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 // import 'package:weather_app/Service/WeatherService.dart';
 // import 'package:weather_app/models/Weather_Model.dart';
 
@@ -16,7 +18,10 @@ class SearchWidget extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(18)),
       ),
       child: TextField(
-        onSubmitted: (value) async {},
+        onSubmitted: (value) async {
+          var getWeatherCubit = BlocProvider.of<GetWeatherCubit>(context);
+          getWeatherCubit.getWeather(cityName: value);
+        },
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           border: OutlineInputBorder(

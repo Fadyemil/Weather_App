@@ -17,7 +17,7 @@ class GetWeatherCubit extends Cubit<GetWeatherState> {
       print('***********${weatherModel.location.name}***************');
       emit(WeatherLoadingState());
     } catch (e) {
-      emit(WeatherFailureState());
+      emit(WeatherFailureState(e.toString()));
     }
   }
 }

@@ -9,4 +9,7 @@ final class GetWeatherInitial extends GetWeatherState {}
 
 final class WeatherLoadingState extends GetWeatherState {}
 
-final class WeatherFailureState extends GetWeatherState {}
+final class WeatherFailureState extends GetWeatherState {
+  final String errorMessage;
+  WeatherFailureState(this.errorMessage);
+}
