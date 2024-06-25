@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
 // import 'package:flutter/rendering.dart';
 import 'package:weather_app/widget/HomePageWidget/WeatherInfoBody.dart';
 // import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
@@ -33,13 +34,3 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class NoWeatherBody extends StatelessWidget {
-  const NoWeatherBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('No weather body'),
-    );
-  }
-}

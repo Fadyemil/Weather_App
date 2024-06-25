@@ -1,4 +1,8 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 
 class WeatherState extends StatelessWidget {
   const WeatherState({
@@ -10,6 +14,7 @@ class WeatherState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var weatherModel = BlocProvider.of<GetWeatherCubit>(context).weatherModel;
     return Positioned(
       top: screanHeight * 0.1,
       child: Container(
@@ -19,15 +24,17 @@ class WeatherState extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Montreal',
+            Text(
+              weatherModel.location.name,
               style: TextStyle(
                   color: Color(0xffFFFFFF),
                   fontSize: 24,
                   fontWeight: FontWeight.w800),
             ),
-            const Text(
-              '19°',
+            Text(
+              weatherModel.forecast.forecastday.first.avgtempC
+                  .toInt()
+                  .toString(),
               style: TextStyle(
                 height: 1,
                 color: Color(0xffFFFFFF),
@@ -36,7 +43,7 @@ class WeatherState extends StatelessWidget {
               ),
             ),
             Text(
-              'Mostly Clear',
+              weatherModel.current.condition.text,
               style: TextStyle(
                 fontFamily: 'Helvetica',
                 color: Color(0xffEBEBF5).withOpacity(0.5),
@@ -44,12 +51,12 @@ class WeatherState extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "H:24",
+                  "H:${weatherModel.forecast.forecastday.first.maxtempC.toInt()}",
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
                     fontSize: 18,
@@ -58,7 +65,7 @@ class WeatherState extends StatelessWidget {
                 ),
                 SizedBox(width: 12),
                 Text(
-                  "L:18",
+                  "L:${weatherModel.forecast.forecastday.first.mintempC.toInt()}",
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
                     fontSize: 18,
