@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:dio/dio.dart';
-import 'package:weather_app/models/Weather_Model.dart';
+import 'package:weather_app/core/models/Weather_Model.dart';
 
 class WeatherService {
   final Dio dio;

@@ -26,7 +26,19 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
       child: Container(
         width: MediaQuery.sizeOf(context).width,
         decoration: const BoxDecoration(
-          color: Color(0xff2E335A),
+          // color: Color(0xff2E335A),
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.topLeft,
+            colors: [
+              Color(0xff2E335A),
+              // Color(0xff252747),
+              // Color(0xff21213D),
+              Color(
+                0xff1C1B33,
+              ),
+            ],
+          ),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(12),
             topRight: Radius.circular(12),
@@ -89,12 +101,7 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
                             weatherModel
                                 .forecast.forecastday[0].hour[index].time
                                 .substring(11, 16),
-                            style: TextStyle(
-                              color: selectedIndex == index
-                                  ? const Color.fromARGB(204, 0, 0, 0)
-                                  : Colors.white,
-                              fontSize: 16,
-                            ),
+                            style: textstyle16(index),
                           ),
                           Image.network(
                               "https:${weatherModel.forecast.forecastday[0].hour[index].condition.icon}"),
@@ -103,12 +110,7 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
                                 .forecast.forecastday[0].hour[index].tempC
                                 .ceil()
                                 .toString(),
-                            style: TextStyle(
-                              color: selectedIndex == index
-                                  ? const Color.fromARGB(204, 0, 0, 0)
-                                  : Colors.white,
-                              fontSize: 16,
-                            ),
+                            style: textstyle16(index),
                           ),
                         ],
                       ),
@@ -120,6 +122,15 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
           ],
         ),
       ),
+    );
+  }
+
+  TextStyle textstyle16(int index) {
+    return TextStyle(
+      color: selectedIndex == index
+          ? const Color.fromARGB(204, 0, 0, 0)
+          : Colors.white,
+      fontSize: 16,
     );
   }
 }

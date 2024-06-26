@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/utils/styles.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 
 class WeatherState extends StatelessWidget {
@@ -26,52 +27,29 @@ class WeatherState extends StatelessWidget {
           children: [
             Text(
               weatherModel.location.name,
-              style: TextStyle(
-                  color: Color(0xffFFFFFF),
-                  fontSize: 24,
-                  fontWeight: FontWeight.w800),
+              style: Styles.textstyle24_ExtraBold,
             ),
             Text(
-              weatherModel.forecast.forecastday.first.avgtempC
-                  .ceil()
-                  .toString(),
-              style: TextStyle(
-                height: 1,
-                color: Color(0xffFFFFFF),
-                fontSize: 35,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-            Text(
-              weatherModel.current.condition.text,
-              style: TextStyle(
-                fontFamily: 'Helvetica',
-                color: Color(0xffEBEBF5).withOpacity(0.5),
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
+                weatherModel.forecast.forecastday.first.avgtempC
+                    .ceil()
+                    .toString(),
+                style: Styles.textstyle35_white),
+            Text(weatherModel.current.condition.text,
+                style: Styles.textstyle18.copyWith(
+                  color: Color(0xffEBEBF5).withOpacity(0.5),
+                )),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "H:${weatherModel.forecast.forecastday.first.maxtempC.ceil()}",
-                  style: TextStyle(
-                    color: Color(0xffFFFFFF),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: Styles.textstyle18_Build,
                 ),
                 SizedBox(width: 12),
                 Text(
-                  "L:${weatherModel.forecast.forecastday.first.mintempC.ceil()}",
-                  style: TextStyle(
-                    color: Color(0xffFFFFFF),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
+                    "L:${weatherModel.forecast.forecastday.first.mintempC.ceil()}",
+                    style: Styles.textstyle18_Build),
               ],
             )
           ],

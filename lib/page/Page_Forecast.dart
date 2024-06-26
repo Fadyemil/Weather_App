@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/widget/AppWidget/Error_Search.dart';
 import 'package:weather_app/widget/HomePageWidget/ForecastData.dart';
 import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
 
@@ -22,7 +23,8 @@ class Page_Forecast extends StatelessWidget {
             } else if (state is WeatherLoadingState) {
               return ForecastData(screanHeight: screanHeight);
             } else {
-              return Text('opps ther was an error');
+              return Error_Search(
+                  screanHeight: screanHeight, screanWidth: screanWidth);
             }
           },
         ),

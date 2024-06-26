@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/utils/styles.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
 import 'package:weather_app/widget/searchWidhet/AppBarSearchPage.dart';
@@ -28,7 +29,10 @@ class Searchpage extends StatelessWidget {
               return SearchData(
                   screanHeight: screanHeight, screanWidth: screanWidth);
             } else {
-              return Text('opps ther was an error');
+              return const Center(
+                child: Text('opps ther was an error, please try again',
+                    style: Styles.textstyle22),
+              );
             }
           },
         ),

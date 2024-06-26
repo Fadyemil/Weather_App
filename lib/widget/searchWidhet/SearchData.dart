@@ -15,6 +15,18 @@ class SearchData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
+     /* // decoration: BoxDecoration(
+      //   gradient: LinearGradient(
+      //     // begin: Alignment.topRight,
+      //     // end: Alignment.topLeft,
+      //     colors: [
+      //       Color(0xff612FAB),
+      //       Color(0xff612FAB),
+      //       Color(0xff21213D),
+      //       Color(0xff1C1B33),
+      //     ],
+      //   ),
+      // ),*/
       child: Column(
         children: [
           // SearchWidget(),
