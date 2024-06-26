@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/utils/assets.dart';
-import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
+import 'package:weather_app/Features/Home/presentation/view/HomePageWidget/WeatherState.dart';
+import 'package:weather_app/Features/Home/presentation/view/HomePageWidget/Weekly_Forecast.dart';
 
-class WeatherInfoBody extends StatelessWidget {
-  const WeatherInfoBody({
+class ForecastData extends StatelessWidget {
+  const ForecastData({
     super.key,
     required this.screanHeight,
   });
@@ -34,6 +35,9 @@ class WeatherInfoBody extends StatelessWidget {
             height: 390,
             child: Image.asset(Assets.assetsImageHouse),
           ),
+        ),
+        Weekly_Forecast(
+          screanHeight: screanHeight,
         ),
       ],
     );

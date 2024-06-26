@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/SearchWidget.dart';
 
 AppBar AppBarSearchPage() {
   return AppBar(

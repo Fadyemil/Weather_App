@@ -1,7 +1,7 @@
 // import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
 // import 'package:weather_app/Service/WeatherService.dart';
 // import 'package:weather_app/models/Weather_Model.dart';
 

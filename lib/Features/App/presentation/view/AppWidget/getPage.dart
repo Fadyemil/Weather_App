@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/page/MyHomePage.dart';
-import 'package:weather_app/page/Page_Forecast.dart';
-import 'package:weather_app/page/SearchPage.dart';
+import 'package:weather_app/Features/Home/presentation/view/MyHomePage.dart';
+import 'package:weather_app/Features/Forecast/presentation/view/Page_Forecast.dart';
+import 'package:weather_app/Features/search/view/SearchPage.dart';
 
 Widget getPage(int index) {
   switch (index) {

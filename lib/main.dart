@@ -3,11 +3,11 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/Application.dart';
-import 'package:weather_app/manger/SelectPage/SelectPage_Cubit.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
-import 'package:weather_app/widget/AppWidget/EnterNetMobile.dart';
-import 'package:weather_app/widget/AppWidget/NoInterNet.dart';
+import 'package:weather_app/Features/App/presentation/view/Application.dart';
+import 'package:weather_app/Features/App/presentation/manger/SelectPage/SelectPage_Cubit.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/App/presentation/view/AppWidget/EnterNetMobile.dart';
+import 'package:weather_app/Features/App/presentation/view/AppWidget/NoInterNet.dart';
 // import 'package:weather_app/page/MyHomePage.dart';
 
 void main() {

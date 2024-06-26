@@ -1,14 +1,14 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:dio/dio.dart';
+import 'package:weather_app/core/constants/constants.dart';
 import 'package:weather_app/core/models/Weather_Model.dart';
 
 class WeatherService {
   final Dio dio;
   WeatherService(this.dio);
 
-  final String baseUrl = 'https://api.weatherapi.com/v1';
-  final String ApiKey = '2c4a608571ac40e982a202508242306';
+  
 
   Future<WeatherModel> getCurrentWeather({required String cityName}) async {
     try {

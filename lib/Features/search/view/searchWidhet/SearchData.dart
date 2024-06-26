@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/widget/searchWidhet/DetailsWeather.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/DetailsWeather.dart';
 
 class SearchData extends StatelessWidget {
   const SearchData({

@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
-import 'package:weather_app/widget/AppWidget/Error_Search.dart';
-import 'package:weather_app/widget/HomePageWidget/ForecastData.dart';
-import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/App/presentation/view/AppWidget/Error_Search.dart';
+import 'package:weather_app/Features/Home/presentation/view/HomePageWidget/ForecastData.dart';
+import 'package:weather_app/Features/Home/presentation/view/HomePageWidget/NoWeatherBody.dart';
 
 class Page_Forecast extends StatelessWidget {
   const Page_Forecast({super.key});

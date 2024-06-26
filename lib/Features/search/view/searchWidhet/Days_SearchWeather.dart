@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/models/Weather_Model.dart';
 import 'package:weather_app/core/utils/styles.dart';
-import 'package:weather_app/widget/searchWidhet/Hight_Low_Degre.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/Hight_Low_Degre.dart';
 
 class Days_SearchWeather extends StatelessWidget {
   const Days_SearchWeather({

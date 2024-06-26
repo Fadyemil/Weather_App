@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/core/utils/assets.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
 
 class Weekly_Forecast extends StatefulWidget {
   const Weekly_Forecast({super.key, required this.screanHeight});

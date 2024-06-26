@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/manger/SelectPage/SelectPage_Cubit.dart';
-import 'package:weather_app/manger/SelectPage/SelectPage_State.dart';
-import 'package:weather_app/widget/AppWidget/NavigationBar.dart';
-import 'package:weather_app/widget/AppWidget/getPage.dart';
+import 'package:weather_app/Features/App/presentation/manger/SelectPage/SelectPage_Cubit.dart';
+import 'package:weather_app/Features/App/presentation/manger/SelectPage/SelectPage_State.dart';
+import 'package:weather_app/Features/App/presentation/view/AppWidget/NavigationBar.dart';
+import 'package:weather_app/Features/App/presentation/view/AppWidget/getPage.dart';
 
 class ApplicationPage extends StatelessWidget {
   const ApplicationPage({super.key});

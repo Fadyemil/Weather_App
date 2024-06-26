@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/core/utils/styles.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
-import 'package:weather_app/widget/HomePageWidget/NoWeatherBody.dart';
-import 'package:weather_app/widget/searchWidhet/AppBarSearchPage.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/Home/presentation/view/HomePageWidget/NoWeatherBody.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/AppBarSearchPage.dart';
 // import 'package:weather_app/widget/searchWidhet/DetailsWeather.dart';
-import 'package:weather_app/widget/searchWidhet/SearchData.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/SearchData.dart';
 // import 'package:weather_app/widget/searchWidhet/SearchWidget.dart';
 
 class Searchpage extends StatelessWidget {

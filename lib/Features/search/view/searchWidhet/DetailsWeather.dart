@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/core/utils/assets.dart';
 // import 'package:weather_app/core/utils/styles.dart';
-import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
+import 'package:weather_app/Features/App/presentation/manger/get_weather/get_weather_cubit.dart';
 // import 'package:weather_app/core/models/Weather_Model.dart';
-import 'package:weather_app/widget/searchWidhet/Days_SearchWeather.dart';
+import 'package:weather_app/Features/search/view/searchWidhet/Days_SearchWeather.dart';
 // import 'package:weather_app/widget/searchWidhet/Hight_Low_Degre.dart';
 
 class DetailsWeather extends StatelessWidget {
