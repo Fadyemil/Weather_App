@@ -43,27 +43,26 @@ class Assets {
 
   static const String assetsImageRectangle1 = "asstes/image/Rectangle 1.png";
 
-  static const String offline =
-      "asstes/image/wifi-error-signal-offline-icon-off-vector-37642163.jpg";
+  static const String offline ="asstes/image/Offline_image.jpg";
 }
 
 dynamic Contion_image_state(WeatherModel weatherModel) {
     if (weatherModel.forecast.forecastday[0].condition.text == "Cloudy") {
-      return "asstes/415.png";
+      return "asstes/image/415.png";
     } else if (weatherModel.forecast.forecastday[0].condition.text == "Sunny") {
-      return 'asstes/396.png';
+      return 'asstes/image/396.png';
     } else if (weatherModel.forecast.forecastday[0].condition.text ==
         "Partly Cloudy ") {
-      return 'asstes/423.png';
+      return 'asstes/image/423.png';
     } else if (weatherModel.forecast.forecastday[0].condition.text ==
         "Overcast") {
-      return 'asstes/415.png';
+      return 'asstes/image/415.png';
     } else if (weatherModel.forecast.forecastday[0].condition.text == "Mist") {
-      return 'asstes/305.png';
+      return 'asstes/image/305.png';
     } else if (weatherModel.forecast.forecastday[0].condition.text ==
         "Patchy snow possible") {
-      return 'asstes/412.png';
+      return 'asstes/image/412.png';
     } else {
-      return 'asstes/113.png';
+      return 'asstes/image/113.png';
     }
   }

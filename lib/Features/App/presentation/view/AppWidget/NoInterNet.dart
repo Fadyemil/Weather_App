@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/assets.dart';
 
 class NoInterNet extends StatelessWidget {
   const NoInterNet({
@@ -13,8 +14,7 @@ class NoInterNet extends StatelessWidget {
           children: [
             SizedBox(height: 150),
             Container(
-              child: Image.asset(
-                  'asstes/wifi-error-signal-offline-icon-off-vector-37642163.jpg'),
+              child: Image.asset(Assets.offline),
             ),
             Text(
               'Internet connection failed',

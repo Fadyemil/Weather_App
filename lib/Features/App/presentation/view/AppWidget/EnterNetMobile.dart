@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/assets.dart';
 
 class EnterNetMobile extends StatelessWidget {
   const EnterNetMobile({
@@ -13,7 +14,7 @@ class EnterNetMobile extends StatelessWidget {
           children: [
             SizedBox(height: 150),
             Container(
-              child: Image.asset('asstes/images.png'),
+              child: Image.asset(Assets.NetWorkData),
             ),
             Text(
               'connected to my phone data',
