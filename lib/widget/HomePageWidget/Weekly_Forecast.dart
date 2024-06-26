@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/utils/assets.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
 
 class Weekly_Forecast extends StatefulWidget {
@@ -47,7 +48,7 @@ class _Weekly_ForecastState extends State<Weekly_Forecast> {
         child: Column(
           children: [
             IconButton(
-                onPressed: () {}, icon: Image.asset('asstes/Indicator.png')),
+                onPressed: () {}, icon: Image.asset(Assets.Indicator)),
             Container(
               // margin: EdgeInsets.all(8),
               child: Row(

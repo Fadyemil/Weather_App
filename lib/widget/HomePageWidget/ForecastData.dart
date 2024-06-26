@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/assets.dart';
 import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
 import 'package:weather_app/widget/HomePageWidget/Weekly_Forecast.dart';
 
@@ -21,7 +22,7 @@ class ForecastData extends StatelessWidget {
           right: 0,
           child: Container(
             child: Image.asset(
-              'asstes/Image.png',
+              Assets.HomeImage,
               fit: BoxFit.fill,
             ),
           ),
@@ -32,7 +33,7 @@ class ForecastData extends StatelessWidget {
           child: Container(
             width: 390,
             height: 390,
-            child: Image.asset('asstes/House.png'),
+            child: Image.asset(Assets.assetsImageHouse),
           ),
         ),
         Weekly_Forecast(

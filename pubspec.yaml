@@ -50,3 +50,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_assets:
+  assets_path: asstes/image/
+  output_path: lib/core/utils/
+  package: module_home

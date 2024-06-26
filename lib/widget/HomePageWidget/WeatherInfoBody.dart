@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/utils/assets.dart';
 import 'package:weather_app/widget/HomePageWidget/WeatherState.dart';
 
 class WeatherInfoBody extends StatelessWidget {
@@ -20,7 +21,7 @@ class WeatherInfoBody extends StatelessWidget {
           right: 0,
           child: Container(
             child: Image.asset(
-              'asstes/Image.png',
+              Assets.HomeImage,
               fit: BoxFit.fill,
             ),
           ),
@@ -31,7 +32,7 @@ class WeatherInfoBody extends StatelessWidget {
           child: Container(
             width: 390,
             height: 390,
-            child: Image.asset('asstes/House.png'),
+            child: Image.asset(Assets.assetsImageHouse),
           ),
         ),
       ],

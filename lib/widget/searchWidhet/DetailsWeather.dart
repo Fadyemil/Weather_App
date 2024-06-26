@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/utils/assets.dart';
 // import 'package:weather_app/core/utils/styles.dart';
 import 'package:weather_app/manger/get_weather/get_weather_cubit.dart';
-import 'package:weather_app/core/models/Weather_Model.dart';
+// import 'package:weather_app/core/models/Weather_Model.dart';
 import 'package:weather_app/widget/searchWidhet/Days_SearchWeather.dart';
 // import 'package:weather_app/widget/searchWidhet/Hight_Low_Degre.dart';
 
@@ -33,7 +34,7 @@ class DetailsWeather extends StatelessWidget {
                 child: Container(
                   // width: 400,
                   child: Image.asset(
-                    'asstes/Rectangle 1.png',
+                    Assets.assetsImageRectangle1,
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -64,25 +65,6 @@ class DetailsWeather extends StatelessWidget {
     );
   }
 
-  dynamic Contion_image_state(WeatherModel weatherModel) {
-    if (weatherModel.forecast.forecastday[0].condition.text == "Cloudy") {
-      return "asstes/415.png";
-    } else if (weatherModel.forecast.forecastday[0].condition.text == "Sunny") {
-      return 'asstes/396.png';
-    } else if (weatherModel.forecast.forecastday[0].condition.text ==
-        "Partly Cloudy ") {
-      return 'asstes/423.png';
-    } else if (weatherModel.forecast.forecastday[0].condition.text ==
-        "Overcast") {
-      return 'asstes/415.png';
-    } else if (weatherModel.forecast.forecastday[0].condition.text == "Mist") {
-      return 'asstes/305.png';
-    } else if (weatherModel.forecast.forecastday[0].condition.text ==
-        "Patchy snow possible") {
-      return 'asstes/415.png';
-    } else {
-      return 'asstes/113.png';
-    }
-  }
+  
 }
 
